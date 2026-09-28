@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя визитка</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            background: #34495e;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        .about {
+            background: #f4f4f4;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Нұрайым Сапа</h1>
+        <p>Студент и начинающий разработчик</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#services">Навыки</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>Обо мне</h2>
+        <p>
+            Меня зовут Нұрайым. Я изучаю программирование,
+            веб-разработку, базы данных и создание приложений.
+        </p>
+
+        <button onclick="changeText()">
+            Нажми меня
+        </button>
+
+        <p id="message"></p>
+    </section>
+
+    <section id="services">
+        <h2>Мои навыки</h2>
+        <br>
+
+        <div class="services">
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Создание структуры веб-страниц.</p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Оформление и адаптивный дизайн.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Добавление интерактивности на сайт.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>sapanuraiym@gmail.com</p>
+        <p>Телефон: +7 (775) 742-72-35</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Нұрайым Сапа. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function changeText() {
+            document.getElementById("message").innerText =
+                "Спасибо за посещение моего сайта!";
+        }
+    </script>
+
+</body>
+</html>
